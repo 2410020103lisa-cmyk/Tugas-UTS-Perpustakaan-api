@@ -1,0 +1,144 @@
+{
+  "info": {
+    "_postman_id": "24b49307-e359-47ab-bd4a-e3c64db5cb12",
+    "name": "Perpustakaan-api",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60086628",
+    "_collection_link": "https://go.postman.co/collection/60086628-24b49307-e359-47ab-bd4a-e3c64db5cb12?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Tambah Buku",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"kode_buku\": \"B003\",\r\n  \"nama_buku\": \"Matematika\",\r\n  \"pengarang\": \"Sri Lestari\",\r\n  \"penerbit\": \"Informatika\",\r\n  \"tahun_terbit\": 2020,\r\n  \"jumlah_total\": 10,\r\n  \"jumlah_tersedia\": 10,\r\n  \"rak\": \"A2\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/buku",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "buku"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Semua Buku",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/buku",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "buku"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ubah Buku",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nama_buku\": \"Pemrograman Web Lanjut\",\r\n  \"jumlah_total\": 12,\r\n  \"jumlah_tersedia\": 8\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/buku/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "buku",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Hapus Buku",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/buku/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "buku",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
